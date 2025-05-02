@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmatt | Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="cube"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="#home" class="logo">Ohmatt</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="theme-btn" id="themeToggle">🌓</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Matthew Hunyingan</h1>
+            <p>Full-stack developer passionate about building intuitive, high-performance applications with clean code.
+            </p>
+            <a href="#projects" class="btn">Explore My Work</a>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>Java</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>HTML/CSS</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>Python</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="projects-grid">
+            <!-- Featured Project -->
+            <div class="project-card featured-project">
+                <div class="featured-badge">Featured</div>
+                <div class="project-info">
+                    <h3>Finance Tracker</h3>
+                    <p>JavaFX application for tracking expenses with data visualization and reporting features.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="demo" onclick="alert('Live demo coming soon!')">Live Demo</a>
+                        <a href="https://github.com/ohmatt160/Finance-Tracker" target="_blank" class="code">View
+                            Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Frontend Challenges</h3>
+                    <p>Collection of responsive frontend projects from Frontend Mentor.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="project.html" class="demo">View Projects</a>
+                        <a href="https://github.com/ohmatt160" target="_blank" class="code">View Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Project</h3>
+                    <p>Coming soon</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="" target="_blank" class="demo">Live Demo</a>
+                        <a href="" target="_blank" class="code">View
+                            Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" required>
+                <div class="error-message">Please enter at least 3 characters</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" required>
+                <div class="error-message">Please enter a valid email</div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" required></textarea>
+                <div class="error-message">Message must be at least 10 characters</div>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ohmatt160" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+        <p>&copy; 2025 Ohmatt. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Wait for page to load
+        window.addEventListener('load', function () {
+            // Hide loader
+            document.querySelector('.loader').classList.add('hidden');
+
+            // Animate skill bars
+            document.querySelectorAll('.progress').forEach(bar => {
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = bar.parentElement.previousElementSibling.lastElementChild.textContent;
+                }, 500);
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            themeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '🌓';
+
+            if (document.body.classList.contains('light-mode')) {
+                document.documentElement.style.setProperty('--dark', '#f8f9fa');
+                document.documentElement.style.setProperty('--light', '#121212');
+            } else {
+                document.documentElement.style.setProperty('--dark', '#121212');
+                document.documentElement.style.setProperty('--light', '#f8f9fa');
+            }
+        });
+
+        // Form validation
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validate Name
+            const name = document.getElementById('name');
+            if (name.value.length < 3) {
+                name.classList.add('invalid');
+                isValid = false;
+            } else {
+                name.classList.remove('invalid');
+            }
+
+            // Validate Email
+            const email = document.getElementById('email');
+            if (!email.checkValidity()) {
+                email.classList.add('invalid');
+                isValid = false;
+            } else {
+                email.classList.remove('invalid');
+            }
+
+            // Validate Message
+            const message = document.getElementById('message');
+            if (message.value.length < 10) {
+                message.classList.add('invalid');
+                isValid = false;
+            } else {
+                message.classList.remove('invalid');
+            }
+
+            if (isValid) {
+                alert('Thank you! Your message has been sent.');
+                this.reset();
+            }
+        });
+
+        // Real-time validation
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', function () {
+                this.classList.remove('invalid');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
