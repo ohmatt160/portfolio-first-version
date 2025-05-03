@@ -414,28 +414,29 @@
      }
 
      nav ul {
-         display: none;
+         display: none !important;
          position: absolute;
          top: 80px;
          right: 5%;
          background: var(--dark);
+         /* Uses CSS variable */
+         color: var(--light);
+         /* Uses CSS variable */
          border-radius: 10px;
          padding: 1rem;
          width: 200px;
          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
          z-index: 1000;
+         transition: background 0.3s ease, color 0.3s ease;
+         /* Smooth transition */
      }
 
      nav ul.active {
-         display: flex;
-         flex-direction: column;
+         display: flex !important;
+         flex-direction: column !important;
          gap: 1rem;
      }
 
-     body.light-mode nav ul {
-         background: var(--light);
-         border: 1px solid rgba(0, 0, 0, 0.1);
-     }
  }
 
  @media (max-width: 480px) {

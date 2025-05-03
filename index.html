@@ -239,6 +239,7 @@
             // localStorage.setItem('userThemePreference', isLight ? 'light' : 'dark');
             themeToggle.textContent = isLight ? '🌙' : '🌓';
 
+            
             if (isLight) {
                 document.documentElement.style.setProperty('--dark', '#f8f9fa');
                 document.documentElement.style.setProperty('--light', '#121212');
@@ -319,7 +320,7 @@
                 });
             });
         });
-        
+
         // Mobile menu toggle
         const menuToggle = document.querySelector('.mobile-menu-toggle');
         const menuIcon = document.querySelector('.menu-icon');

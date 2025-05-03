@@ -238,6 +238,19 @@
     </footer>
 
     <script>
+        // Wait for page to load
+        window.addEventListener('load', function () {
+            // Hide loader
+            document.querySelector('.loader').classList.add('hidden');
+
+            // Animate project cards sequentially
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                }, 200 * index);
+            });
+        });
 
         // Detect device theme preference
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -262,20 +275,6 @@
             }
         });
 
-        // Wait for page to load
-        window.addEventListener('load', function () {
-            // Hide loader
-            document.querySelector('.loader').classList.add('hidden');
-
-            // Animate project cards sequentially
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = 1;
-                }, 200 * index);
-            });
-        });
-
         // Theme toggle
         const themeToggle = document.getElementById('themeToggle');
         themeToggle.addEventListener('click', () => {
@@ -283,13 +282,7 @@
             const isLight = document.body.classList.contains('light-mode');
             // localStorage.setItem('userThemePreference', isLight ? 'light' : 'dark');
             themeToggle.textContent = isLight ? '🌙' : '🌓';
-
-            // Force style recalculation
-            document.querySelectorAll('*').forEach(el => {
-                el.style.display = 'none';
-                el.offsetHeight;
-                el.style.display = '';
-            });
+            
             // Update theme colors
             if (isLight) {
                 document.documentElement.style.setProperty('--dark', '#f8f9fa');
